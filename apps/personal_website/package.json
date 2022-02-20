@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "personal-website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
