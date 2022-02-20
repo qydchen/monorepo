@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [
+  content: [
     // Use *.tsx if using TypeScript
     "./pages/**/*.tsx",
     "./components/**/*.tsx",

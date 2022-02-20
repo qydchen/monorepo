@@ -13,6 +13,9 @@
     "lint": {
       "outputs": []
     },
+    "deploy": {
+      "dependsOn": ["build", "test", "lint"]
+    },
     "dev": {
       "cache": false
     }
