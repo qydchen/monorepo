@@ -6,6 +6,7 @@ import Link from "next/link";
 import { GetStaticPropsResult, InferGetStaticPropsType } from "next";
 import Date from "../components/date";
 import { PostsData } from "../types";
+import { sayHello } from "utils";
 
 /* This is possible because getStaticProps only runs on the server-side. It will never run on the
 client-side. It won’t even be included in the JS bundle for the browser. That means you can write code
@@ -28,6 +29,7 @@ export async function getStaticProps(): Promise<
 export default function Home({
   allPostsData,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  sayHello();
   return (
     <Layout home>
       <Head>
