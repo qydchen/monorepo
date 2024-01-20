@@ -1,0 +1,10 @@
+{
+  "name": "graphql-relay",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "compile": "tsc -p ./tsconfig.json",
+    "build": "yarn compile"
+  }
+}
