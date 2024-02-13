@@ -6,7 +6,8 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "src",
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "esModuleInterop": true
   },
   "include": [
     "src/**/*"
