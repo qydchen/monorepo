@@ -1,5 +1,12 @@
-import React, { ReactNode, createContext, useState } from "react";
+import React, {
+  ReactNode,
+  Suspense,
+  createContext,
+  useEffect,
+  useState,
+} from "react";
 import { Todo } from "./types/todo";
+import useTodoLoader from "./useTodos";
 
 interface TodoContextType {
   todos: Todo[];
@@ -16,10 +23,15 @@ interface Props {
 }
 
 const TodoProvider = ({ children }: Props) => {
+  const payload = useTodoLoader<Todo>();
   const [todos, setTodo] = useState<Todo[]>([]);
+  useEffect(() => {
+    setTodo(payload);
+  }, [payload]);
+
   return (
     <TodosContext.Provider value={{ todos, setTodo }}>
-      {children}
+      <Suspense fallback={<span>LOADING...</span>}>{children}</Suspense>
     </TodosContext.Provider>
   );
 };
