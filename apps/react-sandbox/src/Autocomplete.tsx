@@ -36,7 +36,7 @@ const Autocomplete = () => {
       />
       <ul>
         {autocomplete.map((s) => (
-          <li>{s}</li>
+          <li key={s}>{s}</li>
         ))}
       </ul>
     </section>
