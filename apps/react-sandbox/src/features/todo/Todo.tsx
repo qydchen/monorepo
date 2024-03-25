@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useContext } from "react";
-import { Todo } from "./types/todo";
+import { Todo } from "../../types/todo";
 import { TodosContext } from "./TodoProvider";
 
 const TodoContainer = () => {

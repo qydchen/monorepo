@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import TodoContainer from "./Todo";
-import TodoProvider from "./TodoProvider";
-import Autocomplete from "./Autocomplete";
+import TodoContainer from "./features/todo/Todo";
+import TodoProvider from "./features/todo/TodoProvider";
+import Autocomplete from "./features/autocomplete/Autocomplete";
 
 function App(): React.ReactElement {
   return (

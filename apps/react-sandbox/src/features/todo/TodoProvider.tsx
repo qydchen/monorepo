@@ -5,7 +5,7 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { Todo } from "./types/todo";
+import { Todo } from "../../types/todo";
 import useTodoLoader from "./useTodos";
 
 interface TodoContextType {

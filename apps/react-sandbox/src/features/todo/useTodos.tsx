@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 function useTodoLoader<T>() {
   const [payload, setPayload] = useState<T[]>([]);
-  const timer = useRef<NodeJS.Timeout | null>(null);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
     timer.current = setTimeout(() => {
       let arr = [
