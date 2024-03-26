@@ -1,5 +1,5 @@
 import { useState, ChangeEvent, useRef, useEffect } from "react";
-import { Trie } from "../../trie";
+import { Trie } from "./trie";
 
 const Autocomplete = () => {
   const [text, setText] = useState("");

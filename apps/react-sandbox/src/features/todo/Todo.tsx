@@ -27,7 +27,7 @@ const TodoContainer = () => {
 
   return (
     <div style={{ width: 300 }}>
-      <ul>
+      <ul data-testid="todo-list">
         {todos.map((t) => {
           return (
             <li key={t.id}>
@@ -38,8 +38,15 @@ const TodoContainer = () => {
           );
         })}
       </ul>
-      <input type="text" onChange={handleTodoText} value={text} />
-      <button onClick={addTodo}>Add</button>
+      <input
+        placeholder="Add todo"
+        type="text"
+        onChange={handleTodoText}
+        value={text}
+      />
+      <button onClick={addTodo} data-testid="todo-form-submit">
+        Add
+      </button>
     </div>
   );
 };
